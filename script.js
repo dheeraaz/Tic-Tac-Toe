@@ -26,6 +26,10 @@ newGameBtn.addEventListener("click", () => {
         newGameBtn.style.color = "#0A1115";
         newGameBtn.innerText = "Restart";
 
+        boxes.forEach((box)=>{
+            box.style.color = "white";
+        })
+
     })
 })
 
@@ -61,6 +65,10 @@ function checkWin() {
         if (boxes[c[0]].innerText !== "" && boxes[c[1]].innerText !== "" && boxes[c[2]].innerText !== "") {
 
             if (boxes[c[0]].innerText === boxes[c[1]].innerText && boxes[c[1]].innerText === boxes[c[2]].innerText) {
+
+                for(let i=0;i<3;i++){
+                    boxes[c[i]].style.color = "red";
+                }
 
                 displayMessage(`Congratulations!! Player ${boxes[c[0]].innerText} is winner`);
 
