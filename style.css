@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #F4F8FA;
+
+    /* yo padding diyena vani, yesko child ma efficiently margin, padding lagdaina */
+    padding: 10px;
+}
+
+.container h1 {
+    margin: 40px auto 0;
+    text-align: center;
+    color: #0A1115;
+
+    font-size: 40px;
+}
+
+.messagebox {
+    text-align: center;
+
+    margin: 20px auto;
+    padding: 10px;
+    font-size: 20px;
+
+    width: 90%;
+    max-width: 520px;
+
+    background-color: #E2EDF3;
+    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.1);
+
+    border-radius: 30px;
+
+}
+
+
+.app {
+    width: 90%;
+    max-width: 520px;
+    height: 520px;
+    margin: 20px auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+
+}
+
+.box {
+    border: none;
+    outline: none;
+
+    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: #5293B5;
+    color: white;
+
+    font-size: 60px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+/*start: CSS for New game button */
+.button-grp {
+    margin-top: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.new-game {
+    height: 3em;
+    width: 8em;
+    border: none;
+    border-radius: 10em;
+    background: #9EC4D8;
+    font-size: 17px;
+    color: #0A1115;
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.new-game:hover {
+    animation: shake3856 0.3s linear infinite both;
+}
+
+@keyframes shake3856 {
+    0% {
+        -webkit-transform: translate(0);
+        transform: translate(0);
+    }
+
+    20% {
+        -webkit-transform: translate(-2px, 2px);
+        transform: translate(-2px, 2px);
+    }
+
+    40% {
+        -webkit-transform: translate(-2px, -2px);
+        transform: translate(-2px, -2px);
+    }
+
+    60% {
+        -webkit-transform: translate(2px, 2px);
+        transform: translate(2px, 2px);
+    }
+
+    80% {
+        -webkit-transform: translate(2px, -2px);
+        transform: translate(2px, -2px);
+    }
+
+    100% {
+        -webkit-transform: translate(0);
+        transform: translate(0);
+    }
+}
+
+/*End: CSS for New game button */
+
+
+@media (width<=600px) {
+
+    .container h1 {
+        margin: 20px auto 0;
+        font-size: 30px;
+    }
+
+    .messagebox {
+        font-size: 15px;
+    }
+
+    .app {
+        width: 90%;
+        max-width: 420px;
+        height: 420px;
+
+    }
+    .box:hover{
+        animation: none !important;
+    }
+
+    .new-game:hover {
+        animation: none !important;
+    }
+}
